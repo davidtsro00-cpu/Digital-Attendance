@@ -1,0 +1,15 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+TARGET = attendance_system.exe
+SRCS = main.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
+
+clean:
+	del $(TARGET)
+
+run: $(TARGET)
+	$(TARGET)
